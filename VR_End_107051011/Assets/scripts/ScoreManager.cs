@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.parent.tag == "圈圈")
+        if (other.transform.parent && other.transform.parent.tag == "圈圈")
         {
             other.transform.parent.tag = "Untagged";
             AddScore();
