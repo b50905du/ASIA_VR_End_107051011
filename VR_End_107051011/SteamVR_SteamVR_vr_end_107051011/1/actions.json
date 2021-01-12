@@ -1,0 +1,11 @@
+{
+  "actions": [],
+  "action_sets": [
+    {
+      "name": "/actions/",
+      "usage": "single"
+    }
+  ],
+  "default_bindings": [],
+  "localization": []
+}
