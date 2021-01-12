@@ -6,9 +6,9 @@ public class ScoreManager : MonoBehaviour
     [Header("分數介面")]
     public Text text;
     [Header("分數")]
-    public int score;
+    public static int score;
     [Header("得分")]
-    public int scoreIn = 1;
+    public int add;
     [Header("進球音效")]
     public AudioClip soundIn;
 
@@ -21,14 +21,15 @@ public class ScoreManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "圈圈")
+        if (other.transform.parent.tag == "圈圈")
         {
+            other.transform.parent.tag = "Untagged";
             AddScore();
         }
     }
     private void AddScore()
     {
-        score += scoreIn;
+        score += add;
         text.text = score.ToString();
         aud.PlayOneShot(soundIn, Random.Range(1f, 2f));
     }
