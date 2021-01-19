@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - "\u85CD1"
-  - "\u9EC32"
-  - "\u7D053"
-  - "\u5708\u5708"
+  - projectile
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
